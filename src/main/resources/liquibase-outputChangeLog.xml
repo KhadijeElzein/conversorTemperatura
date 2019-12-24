@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="Khadije" id="1577194420965-1">
+        <createTable tableName="historico">
+            <column autoIncrement="true" name="id_historico" type="INT">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="temperatura" type="DECIMAL(6, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="escala" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resultado" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="data_consulta" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
